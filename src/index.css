@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('/fonts/NeueMontreal-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('/fonts/NeueMontreal-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Neue Montreal';
+    src: url('/fonts/NeueMontreal-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+  :root {
+    --background: 225 18% 20%; /* #2A2E36 */
+    --foreground: 0 0% 100%;
+
+    --card: 225 18% 20%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 225 18% 20%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 35 37% 64%;
+    --primary-foreground: 225 24% 14%;
+
+    --secondary: 225 24% 14%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 225 18% 20%;
+    --muted-foreground: 215 4% 57%;
+
+    --accent: 35 37% 64%;
+    --accent-foreground: 225 24% 14%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 225 18% 25%;
+    --input: 225 18% 25%;
+    --ring: 35 37% 64%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-secondary text-foreground font-sans;
+  }
+}
+
+/* Custom styles for a more luxury feel */
+.btn-primary {
+  @apply bg-primary hover:bg-primary-dark text-secondary font-medium px-6 py-2 rounded transition-colors;
+}
+
+.card-luxury {
+  @apply bg-muted border border-primary/20 rounded-lg shadow-lg;
+}
+
+.input-luxury {
+  @apply bg-muted border border-primary/20 text-foreground focus:border-primary focus:ring-1 focus:ring-primary;
+}
+
+.heading-luxury {
+  @apply text-2xl font-bold text-primary mb-6;
+}
